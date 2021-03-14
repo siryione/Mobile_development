@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,5 +23,12 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_dashboard))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        val time = TimeIS(12,12,12)
+        val time2 = TimeIS(2,15,15)
+        println("${TimeIS.add(time, time2)}")
+        println("${TimeIS.sub(time, time2)}")
+        println("${time.sub(time2)}")
+        println("test $time")
     }
+
 }
