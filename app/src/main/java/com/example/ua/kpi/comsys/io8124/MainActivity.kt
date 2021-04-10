@@ -1,12 +1,15 @@
 package com.example.ua.kpi.comsys.io8124
 
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.intrusoft.scatter.PieChart
+import com.jjoe64.graphview.GraphView
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,12 +26,17 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_dashboard))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-        val time = TimeIS(12,12,12)
-        val time2 = TimeIS(2,15,15)
-        println("${TimeIS.add(time, time2)}")
-        println("${TimeIS.sub(time, time2)}")
-        println("${time.sub(time2)}")
-        println("test $time")
     }
+    fun onChangeGraphClick(view: View) {
+        val graph = findViewById<GraphView>(R.id.graph)
+        val pieChart = findViewById<PieChart>(R.id.pie_chart)
 
+        if (graph.visibility == View.GONE) {
+            graph.visibility = View.VISIBLE
+            pieChart.visibility = View.GONE
+        } else {
+            graph.visibility = View.GONE
+            pieChart.visibility = View.VISIBLE
+        }
+    }
 }
