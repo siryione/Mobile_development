@@ -11,4 +11,9 @@
         android:icon="@drawable/baseline_school_24"
         android:title="@string/title_school" />
 
+    <item
+        android:id="@+id/navigation_moviesList"
+        android:icon="@drawable/outline_theaters_24"
+        android:title="@string/title_movies" />
+
 </menu>
