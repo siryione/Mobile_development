@@ -16,4 +16,9 @@
         android:icon="@drawable/outline_theaters_24"
         android:title="@string/title_movies" />
 
+    <item
+        android:id="@+id/navigation_picture"
+        android:icon="@drawable/camera"
+        android:title="@string/image" />
+
 </menu>

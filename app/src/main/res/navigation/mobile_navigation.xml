@@ -22,4 +22,9 @@
         android:name="com.example.ua.kpi.comsys.io8124.ui.moviesList.MoviesListFragment"
         android:label="@string/title_movies"
         tools:layout="@layout/fragment_film_list" />
+    <fragment
+        android:id="@+id/navigation_picture"
+        android:name="com.example.ua.kpi.comsys.io8124.ui.image.ImageFragment"
+        android:label="Pictures"
+        tools:layout="@layout/fragment_image_list" />
 </navigation>
